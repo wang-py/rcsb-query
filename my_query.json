@@ -1,0 +1,25 @@
+{
+  "query": {
+    "type": "group",
+    "logical_operator": "and",
+    "nodes": [
+      {
+      "type": "terminal",
+      "service": "full_text",
+      "parameters": {
+      "value": "Complex I"
+        }
+        
+      },
+      {"type": "terminal",
+        "service": "text",
+        "parameters": {
+        "operator": "greater",
+        "value": "2020-01-01",
+        "attribute": "rcsb_accession_info.initial_release_date"
+        }
+      }
+    ]
+  },
+  "return_type": "entry"
+}
