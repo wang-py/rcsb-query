@@ -10,7 +10,8 @@ q3 = attrs.rcsb_accession_info.deposit_date > "2010-01-01"
 
 query = q1 & q2 & q3
 
-hits = [x for x in list(query(results_verbosity="minimal")) if x['score'] > 0.8]
+hits = [x for x in list(query(results_verbosity="minimal"))
+        if x['score'] > 0.8]
 
 print("total number of results: ", query.count())
 print(f"scores above 0.8: {len(hits)}")
